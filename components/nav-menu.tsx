@@ -15,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Download } from 'lucide-react'
 import { Home, Github } from "lucide-react"
+import { scrollToSection } from "@/lib/scroll-utils";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -49,11 +50,17 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ]
 
+const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+  e.preventDefault();
+  scrollToSection(sectionId);
+};
+
 export function NavMenu() {
   return (
     <nav className="flex items-center gap-6">
       <Link 
         href="/" 
+        onClick={(e) => handleNavClick(e, "home")}
         className="flex items-center gap-2 text-gray-200 hover:text-white transition-colors"
       >
         <Home className="w-5 h-5" />
@@ -61,6 +68,7 @@ export function NavMenu() {
       </Link>
       <Link 
         href="#download" 
+        onClick={(e) => handleNavClick(e, "download")}
         className="flex items-center gap-2 text-gray-200 hover:text-white transition-colors"
       >
         <Download className="w-5 h-5" />

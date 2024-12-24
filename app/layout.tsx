@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
+import ScrollToTop from '@/components/scroll-to-top'
 
 export const viewport: Viewport = {
   themeColor: '#FF6666',
@@ -9,58 +10,31 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s | DTikTok',
-    default: 'DTikTok - Next-Gen TikTok Video Downloader for iOS',
-  },
-  description: 'DTikTok is a cutting-edge iOS Shortcut designed to revolutionize your TikTok experience by enabling seamless video downloads in HD quality. Easy to install, free to use.',
-  keywords: ['TikTok downloader', 'iOS shortcut', 'TikTok video download', 'DTikTok', 'social media tools', 'iOS automation'],
-  authors: [{ name: 'DTikTok Team' }],
-  creator: 'DTikTok Team',
-  publisher: 'DTikTok',
+  title: 'DTikTok - Download TikTok Videos Without Watermark',
+  description: 'DTikTok is an iOS Shortcut designed for downloading TikTok videos seamlessly. Save your favorite TikTok content without watermarks in high quality.',
+  keywords: ['tiktok downloader', 'ios shortcut', 'download tiktok', 'no watermark', 'social media', 'video downloader'],
+  authors: [{ name: 'Raihan Sardar' }],
+  creator: 'Raihan Sardar',
+  publisher: 'Raihan Sardar',
   formatDetection: {
+    email: false,
+    address: false,
     telephone: false,
   },
   metadataBase: new URL('https://dtiktok.vercel.app'),
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
-    title: 'DTikTok - Next-Gen TikTok Video Downloader for iOS',
-    description: 'Download TikTok videos in HD quality with DTikTok iOS Shortcut. Simple, fast, and free.',
+    title: 'DTikTok - Download TikTok Videos Without Watermark',
+    description: 'Download TikTok videos without watermark using our iOS Shortcut. Fast, free, and easy to use.',
     url: 'https://dtiktok.vercel.app',
     siteName: 'DTikTok',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'DTikTok - TikTok Video Downloader',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DTikTok - Next-Gen TikTok Video Downloader for iOS',
-    description: 'Download TikTok videos in HD quality with DTikTok iOS Shortcut. Simple, fast, and free.',
-    images: ['/og-image.jpg'],
+    title: 'DTikTok - Download TikTok Videos Without Watermark',
+    description: 'Download TikTok videos without watermark using our iOS Shortcut. Fast, free, and easy to use.',
     creator: '@dtiktok',
-  },
-  icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-    ],
-    apple: [
-      { url: '/logo.svg' },
-    ],
-  },
-  manifest: '/site.webmanifest',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'black-translucent',
-    title: 'DTikTok',
   },
   verification: {
     google: 'your-google-site-verification',
@@ -75,11 +49,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="canonical" href="https://dtiktok.vercel.app" />
         <link rel="apple-touch-icon" href="/logo.svg" />
         <meta name="theme-color" content="#FF6666" />
       </head>
-      <body>{children}</body>
+      <body className="min-h-screen bg-background antialiased">
+        {children}
+        <ScrollToTop />
+      </body>
     </html>
   )
 }
