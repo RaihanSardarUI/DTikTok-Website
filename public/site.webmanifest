@@ -1,0 +1,16 @@
+{
+  "name": "DTikTok",
+  "short_name": "DTikTok",
+  "description": "Next-Gen TikTok Video Downloader for iOS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

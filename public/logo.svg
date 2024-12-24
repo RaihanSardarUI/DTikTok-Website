@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" aria-label="DTikTok Icon" role="img">
+  <!-- DTikTok Icon Background -->
+  <title>DTikTok Icon</title>
+  <desc>A stylized film strip icon for DTikTok with coral pink background and white accent</desc>
+  
+  <!-- Background square with consistent border radius -->
+  <rect x="0" y="0" width="512" height="512" rx="32" fill="#FF6666"/>
+  
+  <!-- White film strip container - original radius preserved -->
+  <rect x="56" y="106" width="400" height="300" rx="50" fill="#FFFFFF"/>
+  
+  <!-- Left sprocket holes -->
+  <rect x="91" y="146" width="30" height="30" rx="6" fill="#FF6666"/>
+  <rect x="91" y="196" width="30" height="30" rx="6" fill="#FF6666"/>
+  <rect x="91" y="246" width="30" height="30" rx="6" fill="#FF6666"/>
+  <rect x="91" y="296" width="30" height="30" rx="6" fill="#FF6666"/>
+  <rect x="91" y="346" width="30" height="30" rx="6" fill="#FF6666"/>
+  
+  <!-- Right sprocket holes -->
+  <rect x="391" y="146" width="30" height="30" rx="6" fill="#FF6666"/>
+  <rect x="391" y="196" width="30" height="30" rx="6" fill="#FF6666"/>
+  <rect x="391" y="246" width="30" height="30" rx="6" fill="#FF6666"/>
+  <rect x="391" y="296" width="30" height="30" rx="6" fill="#FF6666"/>
+  <rect x="391" y="346" width="30" height="30" rx="6" fill="#FF6666"/>
+  
+  <!-- Center bar -->
+  <rect x="146" y="246" width="220" height="30" rx="6" fill="#FF6666"/>
+</svg>
